@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/Pokemon">
+
+    <fragment
+        android:id="@+id/myPokemon"
+        android:name="com.rifqiananda.pokemonapp.ui.fragments.FragmentMyPokemon"
+        android:label="@string/my_pokemon"
+        tools:layout="@layout/fragment_my_pokemon"/>
+    <fragment
+        android:id="@+id/Pokemon"
+        android:name="com.rifqiananda.pokemonapp.ui.fragments.FragmentPokemon"
+        android:label="@string/pokemon"
+        tools:layout="@layout/fragment_pokemon">
+        <action
+            android:id="@+id/action_Pokemon_to_fragmentDetailPokemon"
+            app:destination="@id/fragmentDetailPokemon" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDetailPokemon"
+        android:name="com.rifqiananda.pokemonapp.ui.fragments.FragmentDetailPokemon"
+        android:label="FragmentDetailPokemon"
+        tools:layout="@layout/fragment_detail"/>
+</navigation>
